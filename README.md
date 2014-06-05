@@ -24,7 +24,7 @@ Modify `Gruntfile.js` as needed, following the documentation at
 
 The following tasks are currently available:
 
-* **Compile SASS:** `grunt sass:dist`
-* **Copy Bower Components and Assets:** `grunt copy`
-* **Invoke Assemble:** `grunt assemble`
+* Compile SASS: `grunt sass:dist`
+* Copy Bower Components and Assets: `grunt copy`
+* Invoke Assemble: `grunt assemble`
 
