@@ -1,0 +1,74 @@
+//
+// Fonts
+//
+$font-family-national: 'National-Regular';
+$font-family-national-italic: 'National-RegularItalic';
+$font-family-national-bold: 'National-Bold';
+$font-family-national-extrabold: 'National-Extrabold';
+// $font-family-national-extrabold-italic: 'National-ExtraboldItalic';
+
+$font-family-pitch: 'Pitch-Regular';
+
+$font-family-tiempos: 'TiemposHeadline-Semibold';
+
+//
+// Colors
+//
+$color-white-primary: #ffffff;
+
+$color-black-primary: #000000;
+
+$color-gray-primary: #58504D;
+$color-gray-tint-40: tint($color-gray-primary, 60%);
+$color-gray-tint-30: tint($color-gray-primary, 70%);
+$color-gray-tint-25: #827C7A;
+$color-gray-tint-20: tint($color-gray-primary, 80%);
+$color-gray-tint-15: tint($color-gray-primary, 85%);
+
+$color-purple-primary: #5c217f;
+$color-purple-dark: #431C5C;
+$color-purple-really-dark: #340D4D;
+$color-purple-light: #713693;
+$color-purple-tint-50: tint($color-purple-primary, 50%);
+$color-purple-tint-65: tint($color-purple-primary, 35%);
+
+$color-teal-primary: #72CCD2;
+$color-teal-light: #86E0E6;
+$color-teal-dark: #61B4B9;
+$color-teal-tint-50: tint($color-teal-primary, 50%);
+
+$color-red-primary: #F26F6C;
+$color-red-light: #FF8683;
+$color-red-dark: #D4585E;
+
+// Colors array (redefine colors above that need to be _color.scss-ified).
+$colors: (
+    white-primary $color-white-primary,
+    black-primary $color-black-primary,
+    gray-primary $color-gray-primary,
+    gray-tint-40 $color-gray-tint-40,
+    gray-tint-30 $color-gray-tint-30,
+    gray-tint-15 $color-gray-tint-15,
+    purple-primary $color-purple-primary,
+    purple-dark $color-purple-dark,
+    purple-really-dark $color-purple-really-dark,
+    purple-tint-50 $color-purple-tint-50,
+    purple-tint-65 $color-purple-tint-65,
+    teal-primary $color-teal-primary,
+    teal-light $color-teal-light,
+    teal-dark $color-teal-dark,
+    teal-tint-50 $color-teal-tint-50,
+    red-primary $color-red-primary,
+    red-light $color-red-light,
+    red-dark $color-red-dark
+);
+
+//
+// Transition Speeds
+//
+$transition-speed-very-fast: 150ms;
+$transition-speed-fast: 200ms;
+$transition-speed-normal: 300ms;
+$transition-speed-slow: 500ms;
+$transition-speed-very-slow: 700ms;
+$transition-speed-ultra-slow: 1000ms;

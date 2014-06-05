@@ -1,0 +1,116 @@
+.columns {
+    word-wrap: break-word;
+}
+
+//
+// Small (18px margins, 36px gutters)
+//
+@media #{$small-only} {
+    .column,
+    .columns {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .row {
+        padding-left: 18px;
+        padding-right: 18px;
+        &.collapse {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+
+//
+// Medium-up (24px margins, 48px gutters)
+//
+@media #{$medium-up} {
+    .column,
+    .columns {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .row {
+        padding-left: 24px;
+        padding-right: 24px;
+        &.collapse {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+
+//
+// Nested rows should not have left/right padding.
+//
+.row .row {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media #{$small-only} {
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+
+    @media #{$medium-up} {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+}
+
+.row.full-width > .columns.centered {
+
+    padding-left: 0;
+    padding-right: 0;
+
+    & > .row{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 90rem;
+    }
+}
+
+
+//
+// Prefix/postfix override
+//
+.prefix {
+    height: 48px !important;
+}
+.postfix {
+    height: 48px !important;
+}
+
+
+//
+// Offcanvas
+//
+
+.off-canvas-wrap {
+    .exit-off-canvas {
+        background-color: $color-black-primary !important;
+        @include opacity(0);
+        @include transition(opacity $transition-speed-slow);
+        @include box-shadow(1px 0 2px rgba(0, 0, 0, 0.9) !important);
+    }
+
+    &.move-left {
+        .exit-off-canvas {
+            @include opacity(0.6);
+            @include transition(opacity $transition-speed-slow);
+        }
+    }
+}
+
+.hide-for-custom-large-down {
+    display: none;
+
+    @media only screen and (min-width : 1700px) {
+        display: block;
+    }
+}

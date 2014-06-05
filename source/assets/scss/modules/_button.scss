@@ -1,0 +1,111 @@
+//
+// Button specific mixins.
+//
+@mixin button-hover($bg-color, $text-color) {
+	&:hover {
+		background-color: $bg-color !important;
+		color: $text-color !important;
+
+		@include transition(background-color $transition-speed-fast);
+	}
+}
+
+// General button styles.
+.button {
+	
+	@media #{$small-only} {
+		// padding-left: 37px;
+		// padding-right: 37px;
+	}
+
+	@media #{$medium-up} {
+    	width: 192px;
+    }
+	
+	@include font-national-button();
+
+	@include border-radius($global-radius);
+
+	@media #{$small-only} {
+		height: 42px;
+		padding: 8px 20px 6px 20px !important; // Because of button para-style, this works out to 10px padding all around
+		font-size: 18px !important;
+        line-height: 24px !important;
+	}
+
+	@media #{$medium-only} {
+		height: 42px;
+		padding: 8px 9px 6px 9px !important; // Because of button para-style, this works out to 10px padding all around
+		font-size: 18px !important;
+        line-height: 24px !important;
+	}
+
+	@media #{$large-only} {
+		height: 42px;
+		padding: 8px 9px 6px 9px !important; // Because of button para-style, this works out to 10px padding all around
+		font-size: 18px !important;
+        line-height: 24px !important;
+	}
+
+	@media #{$xlarge-up} {
+		height: 48px;
+		padding: 8px 9px 6px 9px !important; // Because of button para-style, this works out to 10px padding all around
+		font-size: 22px !important;
+        line-height: 30px !important;
+	}
+
+	top: 0 !important; // Removing Foundation default
+	margin-bottom: 0 !important; // Removing Foundation default
+
+	@include transition(background-color $transition-speed-fast);
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+
+// Teal button.
+.button-teal {
+	$bg-color: $color-teal-primary;
+	$bg-color-hover: $color-teal-light;
+	$text-color: $color-purple-dark;
+
+	background-color: $bg-color !important;
+	color: $text-color !important;
+
+	@include button-hover($bg-color-hover, $text-color);
+}
+
+
+// Teal button.
+.button-red {
+	$bg-color: $color-red-primary;
+	$bg-color-hover: $color-red-light;
+	$text-color: $color-purple-dark;
+
+	background-color: $bg-color !important;
+	color: $text-color !important;
+
+	@include button-hover($bg-color-hover, $text-color);
+}
+
+// Teal button.
+.button-gray-outline--small {
+
+	@media #{$small-only} {
+
+		$bg-color: transparent;
+		$bg-color-hover: transparent;
+		$text-color: $color-gray-tint-40;
+
+		background-color: $bg-color !important;
+		color: $text-color !important;
+
+		@include border-radius($global-radius);
+		border: 1px solid $color-gray-tint-40;
+		@include button-hover($bg-color-hover, $text-color);
+
+	}
+}

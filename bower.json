@@ -1,0 +1,12 @@
+{
+  "name": "gfa",
+  "version": "0.0.0",
+  "dependencies": {
+    "compass-mixins": "1.0.0",
+    "bourbon": "~3.1.8",
+    "foundation": "5.2.2",
+    "jquery.easing": "",
+    "watch": "*"
+  },
+  "devDependencies": {}
+}
