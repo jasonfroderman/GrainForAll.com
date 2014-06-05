@@ -8,8 +8,20 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['source/assets/scss/**/*.{scss,sass}'],
-				tasks: ['sass-compile']
-			}
+				tasks: ['sass:dist']
+			},
+            assemble: {
+                files: [
+                    'source/layouts/**/*.*',
+                    'source/pages/**/*.*',
+                    'source/partials/**/*.*'
+                ],
+                tasks: ['assemble']
+            },
+            copy: {
+                files: ['source/assets/**/*.*'],
+                tasks: ['copy']
+            }
 		},
 
 		sass: {
@@ -129,7 +141,7 @@ module.exports = function(grunt) {
                     ext: '/index.html',
                 }]
             }
-        },
+        }
 
 	});
 
@@ -142,5 +154,4 @@ module.exports = function(grunt) {
 
 	// Tell Grunt which tasks to run on cl 'grunt'
 	grunt.registerTask('default', ['sass:dist', 'copy', 'assemble']);
-	grunt.registerTask('sass-watch', ['watch:sass']);
 };
