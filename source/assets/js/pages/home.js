@@ -46,6 +46,12 @@ $(function(){
 		e.preventDefault();
 		subscribeUser();
 	});
+
+	// Get latest tweet.
+	$.getJSON('http://grain-api.herokuapp.com/recent-tweets?callback=?', function(data) {
+		if (data.tweet) $('#latest-tweet').html(data.tweet);
+	});
+
 });
 
 function checkVideoProgress() {
@@ -62,7 +68,6 @@ function checkVideoProgress() {
 		}
 	}
 }
-
 
 function showContent() {
 
@@ -124,7 +129,6 @@ $(window).resize(function() {
 }
 
 function equalizeServiceBoxHeights() {
-
 
 	// Reset the height.
 	$('.home-services-box').each(function() {

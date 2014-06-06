@@ -402,17 +402,6 @@ page_js: home.js
             <div class="bg-color-teal-dark overlay"></div>
         </div>
 
-        <script>
-        var tweets = [
-            'Thank you all so much for the support we\'ve received on our "Here is St. Louis" videos- can\'t wait to keep spreading the love! #stlftl #stl',
-            'Why do people turn to Grain Inc. for creative work? Watch our video: <a class="font-color-purple-tint-50" href="http://eepurl.com/Geeyr" target="_blank">http://eepurl.com/Geeyr</a> #design #marketing #branding #business #stl',
-            'Do you love Saint Louis? Watch and share Here is Saint Louis Two! <a class="font-color-purple-tint-50"  href="http://bit.ly/1dVchdh" target="_blank">http://bit.ly/1dVchdh</a> #stl #stlcurator #stlouis',
-            'We\'re very excited to unveil our new website, built entirely by our talented team. Check it out here: <a class="font-color-purple-tint-50" href="http://grainforall.com" target="_blank">grainforall.com</a> #branding #brandchat #design #designthinking #website'
-        ];
-
-        var rand = Math.floor(Math.random() * 3);
-        </script>
-
         <div class="small-12 medium-4 columns collapse home-company-box three">
             <div class="equal-height-ratio"></div>
             <div class="inner-content">
@@ -424,7 +413,7 @@ page_js: home.js
                         <a id="twitter-link" class="font-color-purple-tint-50 font-national-header-bold-sub" targe="_blank" href="https://twitter.com/GrainForAll">@Grainforall</a>
                     </div>
                     <div class="small-12 columns xlarge-margin-top-4x small-margin-top-3x">
-                        <span class="tweets font-national-header-regular font-color-purple-tint-50"><script>document.write(tweets[rand]);</script></span>
+                        <span id="latest-tweet" class="tweets font-national-header-regular font-color-purple-tint-50"></span>
                     </div>
                 </div>
 
