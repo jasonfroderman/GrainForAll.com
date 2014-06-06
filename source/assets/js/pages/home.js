@@ -164,33 +164,20 @@ function subscribeUser() {
 
 	$('#subscribe-form-status').removeClass('active');
 
-	$.ajax({
-		type: 'POST',
-		url: 'libraries/mailchimp/user.subscribe.php',
-		data: {
-			'email' : email
-		},
-		cache: false,
-		error: function(err) {
-			// console.log(err);
-		},
-		success: function(response) {
-
-			response = JSON.parse(response);
-
-			if (response.status == 'error') {
-                if (response.code == -100) {
-                    $('#subscribe-form-status').html('Invalid email address');
-                } else if (response.code == 214) {
-                    $('#subscribe-form-status').html('This email address is already subscribed');
-                } else {
-                    $('#subscribe-form-status').html('Error subscribing');
-                }
-            } else {
-                $('#subscribe-form-status').html('Thanks for registering - a confirmation email has been sent');
-            }
-
-             $('#subscribe-form-status').addClass('active');
+	$.getJSON('http://grain-api.herokuapp.com/mailchimp-subscribe?email=' + email + '&callback=?', function(data) {
+		if (data.code == 200) {
+			$('#subscribe-form-status').html('Thanks for registering - a confirmation email has been sent');
 		}
+		else if (data.code == -100) {
+			$('#subscribe-form-status').html('Invalid email address');
+		}
+		else if (data.code == 214) {
+			$('#subscribe-form-status').html('This email address is already subscribed');
+		}
+		else {
+			$('#subscribe-form-status').html('Error subscribing');
+		}
+
+		$('#subscribe-form-status').addClass('active');
 	});
 }
