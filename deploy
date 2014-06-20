@@ -1,7 +1,7 @@
 #!/bin/sh
 
 BUILD_DIR=output
-REMOTE=git@github.com:GrainForAll/GrainForAll.github.io.git
+REMOTE=git@git.pagodabox.com:grain.git
 
 # Ensure output folder has a git repo.
 if [ ! -d "$BUILD_DIR/.git" ]; then
