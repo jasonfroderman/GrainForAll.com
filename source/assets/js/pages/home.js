@@ -55,7 +55,7 @@ $(function(){
 });
 
 function checkVideoProgress() {
-	if (App.viewport === 'small') {
+	if (window.App.viewport === 'small' || window.App.viewport === 'medium') {
 		showContent();
 		clearInterval(watchBuffer);
 	} else {
@@ -71,7 +71,7 @@ function checkVideoProgress() {
 
 function showContent() {
 
-	if (window.App.viewport === 'small') {
+	if (window.App.viewport === 'small' || window.App.viewport === 'medium') {
 		$('.main-content-wrapper').addClass('ready');
 		$('.dark-background').css('z-index', '-1');
 		setTimeout(function(){
