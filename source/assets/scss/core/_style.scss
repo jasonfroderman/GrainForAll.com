@@ -432,8 +432,20 @@ footer {
     }
 
     .footer-box {
+
         @media #{$medium-up} {
             border-right: 1px solid $color-purple-really-dark;
+        }
+
+        @media #{$medium-only} {
+            height: 200px;            
+        }
+
+        @media #{$large-only} {
+            height: 180px;
+        }
+
+        @media #{$xlarge-up} {
             height: 166px;
         }
 
@@ -453,5 +465,9 @@ footer {
             @include transition(border-bottom $transition-speed-normal);
         }
 
+    }
+
+    .sm-link {
+        padding-right: 10px;
     }
 }
