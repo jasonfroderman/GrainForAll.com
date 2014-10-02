@@ -437,18 +437,6 @@ footer {
             border-right: 1px solid $color-purple-really-dark;
         }
 
-        @media #{$medium-only} {
-            height: 200px;            
-        }
-
-        @media #{$large-only} {
-            height: 180px;
-        }
-
-        @media #{$xlarge-up} {
-            height: 166px;
-        }
-
         &:last-child {
             @media #{$medium-up} {
                 border-right: none;
