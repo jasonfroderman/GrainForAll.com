@@ -124,6 +124,10 @@
             display: none;
         }
 
+        @media #{$medium-only} {
+            display: none;
+        }
+
         video {
             position: absolute;
             left: 0;
@@ -232,9 +236,9 @@
     }
 
     &:hover {
-        @include transition(background-color $transition-speed-fast);
-        background-color: $color-purple-primary;
-        cursor: pointer;
+        // @include transition(background-color $transition-speed-fast);
+        // background-color: $color-purple-primary;
+        // cursor: pointer;
     }
 
     @media #{$medium-only} {

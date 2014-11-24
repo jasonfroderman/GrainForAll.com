@@ -27,7 +27,13 @@ window.App.calculateViewport();
 /**
  * Any time window width changed, update our viewport.
  */
- $(window).resize(function() {
+$(window).resize(function() {
   App.calculateViewport();
+});
+
+$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload() 
+    }
 });
 

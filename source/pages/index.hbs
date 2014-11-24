@@ -18,20 +18,20 @@ page_js: home.js
                     </div>
                 </div>
                 <div class="row">
-                    <div class="small-12 columns primary-header">
+                    <div class="small-12 columns primary-header small-margin-top-7x">
                         <h1 class="font-color-white-primary small-text-center medium-text-left">Give your message the visibility it deserves.</h1>
                     </div>
                 </div>
             </div>
             <div class="small-12 medium-6 columns medium-margin-top-19x xlarge-margin-top-26x hide-for-small">
                 <p class="font-tiempos-header-midhead font-color-white-primary">
-                    Grain is a full-service creative firm in Saint Louis. We work with
+                    Grain is a full-service creative firm. We work with
                     clients who seek to cultivate goodness and uproot ugliness.<br class="hide-for-custom-large-down" />
-                    <a class="font-color-gray-tint-40 font-tiempos-header-midhead inline underline-color-gray-tint-40" href="about.php">Tell me more</a>
+                    <a class="font-color-gray-tint-40 font-tiempos-header-midhead inline underline-color-gray-tint-40" href="about">Tell me more</a>
                 </p>
             </div>
             <div class="small-12 columns show-for-small text-center small-margin-top-6x">
-                <a class="font-color-gray-tint-40 font-tiempos-header-midhead inline underline-color-gray-tint-40" href="about.php">Tell me more</a>
+                <a class="font-color-gray-tint-40 font-tiempos-header-midhead inline underline-color-gray-tint-40" href="about">Tell me more</a>
             </div>
             <div class="small-12 columns text-center home-hero-explore-wrapper">
                 <a href="javascript:void(0);" class="button button-teal">Explore</a>
@@ -41,14 +41,14 @@ page_js: home.js
         <div class="video-wrapper">
             <script>
             var rand = Math.floor(Math.random() * 3) + 1;
-            document.write('<video id="home-video" src="assets/videos/grain' + rand + '.mp4" width="640" height="360" loop autoplay muted preload></video>');
+            document.write('<video id="home-video" width="640" height="360" loop autoplay muted preload><source src="assets/videos/grain' + rand + '.mp4" type="video/mp4"><source src="assets/videos/grain' + rand + '.ogv" type="video/ogg"></video>');
             </script>
         </div>
     </div>
 </section>
 
 <script>
-    var min_height = 400;
+    var min_height = 450;
 
     if (window.innerHeight > min_height) {
         document.getElementById('home-hero-wrapper').style.height = window.innerHeight + 'px';

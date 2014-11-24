@@ -8,9 +8,9 @@ body {
 }
 
 * {
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-    &::-webkit-scrollbar { width: 0 !important; }
+    // -ms-overflow-style: none;
+    // overflow: -moz-scrollbars-none;
+    // &::-webkit-scrollbar { width: 0 !important; }
 }
 
 // Left/right-only border radius. Ignore on small where we don't typically
@@ -432,9 +432,9 @@ footer {
     }
 
     .footer-box {
+
         @media #{$medium-up} {
             border-right: 1px solid $color-purple-really-dark;
-            height: 166px;
         }
 
         &:last-child {
@@ -453,5 +453,9 @@ footer {
             @include transition(border-bottom $transition-speed-normal);
         }
 
+    }
+
+    .sm-link {
+        padding-right: 10px;
     }
 }
