@@ -1,28 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 
-BUILD_DIR=output
-REMOTE=git@git.pagodabox.com:grain.git
-
-# Ensure output folder has a git repo.
-if [ ! -d "$BUILD_DIR/.git" ]; then
-    echo "Git not initialized.\n"
-    git --git-dir=$BUILD_DIR/.git --work-tree=$BUILD_DIR init
-fi
-
-# Add and commit.
-git --git-dir=$BUILD_DIR/.git --work-tree=$BUILD_DIR add .
-git --git-dir=$BUILD_DIR/.git --work-tree=$BUILD_DIR commit -am "Production deploy."
-
-# Ensure the remote exists.
-echo "$BUILD_DIR\n"
-if git --git-dir=$BUILD_DIR/.git --work-tree=$BUILD_DIR remote -v | grep $REMOTE > /dev/null; then
-        echo "Remote exists.\n"
-else
-        echo "Remote doesn't exist. Adding remote.\n"
-        git --git-dir=$BUILD_DIR/.git --work-tree=$BUILD_DIR remote add origin $REMOTE
-fi
-
-# Push it.
-git --git-dir=$BUILD_DIR/.git --work-tree=$BUILD_DIR push origin master -f
-
-echo "\nDeploy complete.\n"
+git subtree push --prefix output origin gh-pages
