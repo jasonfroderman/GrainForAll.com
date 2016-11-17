@@ -26,13 +26,14 @@ $(function(){
 
 $(window).scroll(function(){
 
-	/* if (App.viewport !== 'small') {
+	if (App.viewport !== 'small') {
 
 		var video = document.getElementById('about-video');
 		if (elementIsInViewport(document.getElementById('about-video-wrapper'))) {
 		
-			video.play();
-			$(video).stop().animate({volume: 1}, 200);
+			// video.play();
+			video.pause();
+			// $(video).stop().animate({volume: 1}, 200);
 
 		} else {
 
@@ -41,7 +42,7 @@ $(window).scroll(function(){
 				video.pause();	
 			});
 		}
-	} */
+	} 
 });
 
 
