@@ -26,7 +26,7 @@ $(function(){
 
 $(window).scroll(function(){
 
-	if (App.viewport !== 'small') {
+	/* if (App.viewport !== 'small') {
 
 		var video = document.getElementById('about-video');
 		if (elementIsInViewport(document.getElementById('about-video-wrapper'))) {
@@ -41,7 +41,7 @@ $(window).scroll(function(){
 				video.pause();	
 			});
 		}
-	}
+	} */
 });
 
 
