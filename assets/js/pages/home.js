@@ -48,9 +48,9 @@ $(function(){
 	});
 
 	// Get latest tweet.
-	$.getJSON('http://grain-api.herokuapp.com/recent-tweets?callback=?', function(data) {
+	/* $.getJSON('http://grain-api.herokuapp.com/recent-tweets?callback=?', function(data) {
 		if (data.tweet) $('#latest-tweet').html(data.tweet);
-	});
+	}); */
 
 });
 
